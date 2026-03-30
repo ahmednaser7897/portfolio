@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ahmed Naser Bakar – Mid-level Flutter Developer from Cairo, Egypt. Portfolio showcasing 15+ cross-platform mobile apps and 3+ years of experience with Flutter & Dart.">
+  <meta name="keywords" content="Flutter Developer, Mobile App Developer, Dart, Ahmed Naser, Portfolio">
+  <meta name="author" content="Ahmed Naser Bakar">
+  <title>Ahmed Naser | Flutter Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Effects -->
+  <div class="bg-grid"></div>
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo">A<span>.</span>Naser</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link nav-cta">Contact</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Available for opportunities
+        </div>
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Ahmed Naser<br><span class="gradient-text">Bakar</span></h1>
+        <p class="hero-title">
+          <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-description">
+          Passionate Flutter developer with 3+ years of experience crafting beautiful, 
+          performant cross-platform mobile applications. I turn ideas into pixel-perfect 
+          products used by thousands.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <i data-lucide="folder-open" style="width:18px;height:18px"></i>
+            View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i data-lucide="send" style="width:18px;height:18px"></i>
+            Get In Touch
+          </a>
+        </div>
+        <div class="hero-social">
+          <span class="hero-social-label">Find me on</span>
+          <div class="hero-social-links">
+            <a href="https://github.com/ahmednaser7897" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+              <i data-lucide="github" style="width:20px;height:20px"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ahmed-naser-9a6342227/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+              <i data-lucide="linkedin" style="width:20px;height:20px"></i>
+            </a>
+            <a href="mailto:ahmednaser.eng@gmail.com" class="social-link" aria-label="Email">
+              <i data-lucide="mail" style="width:20px;height:20px"></i>
+            </a>
+            <a href="tel:+201121362555" class="social-link" aria-label="Phone">
+              <i data-lucide="phone" style="width:20px;height:20px"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <div class="hero-image-border"></div>
+          <div class="hero-image">
+            <img src="avatar.png" alt="Ahmed Naser Bakar" onerror="this.style.display='none'; this.parentElement.querySelector('.placeholder-avatar').style.display='block';">
+            <div class="placeholder-avatar" style="display:none;">
+              <i data-lucide="user" style="width:120px;height:120px"></i>
+            </div>
+          </div>
+          <!-- Floating badges -->
+          <div class="floating-badge badge-1">
+            <span class="badge-icon">💙</span> Flutter
+          </div>
+          <div class="floating-badge badge-2">
+            <span class="badge-icon">🎯</span> Dart
+          </div>
+          <div class="floating-badge badge-3">
+            <span class="badge-icon">🔥</span> Firebase
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">Who I Am</h2>
+        <p class="section-subtitle">A brief introduction about my journey as a developer</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a <strong>Mid-level Flutter Developer</strong> based in Cairo, Egypt, 
+            with a passion for building user-centric mobile applications. With a BSc in 
+            Computer Science from Helwan University and 3+ years of hands-on experience, 
+            I specialize in creating scalable, high-performance cross-platform apps.
+          </p>
+          <p>
+            I've had the privilege of working with companies like <strong>Engaz Technology</strong> 
+            and <strong>A'mal Technology</strong>, where I designed and developed 15+ mobile 
+            applications across various industries including healthcare, e-commerce, real estate, 
+            and ERP systems.
+          </p>
+          <p>
+            My approach combines clean architecture principles with modern design patterns to 
+            deliver code that is maintainable, testable, and delightful to use. I'm always 
+            exploring new technologies and pushing the boundaries of what's possible with Flutter.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat-card glass-card">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Apps Built</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-number">25K+</div>
+              <div class="stat-label">Users Impacted</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-highlights reveal reveal-delay-2">
+          <div class="highlight-card glass-card">
+            <div class="highlight-icon">
+              <i data-lucide="smartphone" style="width:24px;height:24px"></i>
+            </div>
+            <div>
+              <h3 class="highlight-title">Cross-Platform Development</h3>
+              <p class="highlight-desc">Building beautiful, native-quality mobile apps for both iOS and Android using Flutter and Dart.</p>
+            </div>
+          </div>
+          <div class="highlight-card glass-card">
+            <div class="highlight-icon">
+              <i data-lucide="layers" style="width:24px;height:24px"></i>
+            </div>
+            <div>
+              <h3 class="highlight-title">Clean Architecture</h3>
+              <p class="highlight-desc">Applying SOLID principles and clean architecture patterns for scalable, maintainable codebases.</p>
+            </div>
+          </div>
+          <div class="highlight-card glass-card">
+            <div class="highlight-icon">
+              <i data-lucide="zap" style="width:24px;height:24px"></i>
+            </div>
+            <div>
+              <h3 class="highlight-title">Performance Focused</h3>
+              <p class="highlight-desc">Optimizing app performance with efficient state management and responsive adaptive UI design.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Experience</p>
+        <h2 class="section-title">Career Journey</h2>
+        <p class="section-subtitle">My professional path in mobile development</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Item 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">
+              <i data-lucide="calendar" style="width:14px;height:14px"></i>
+              Mar 2025 — Feb 2026
+            </span>
+            <h3 class="timeline-role">Mid-level Flutter Developer</h3>
+            <p class="timeline-company">
+              Engaz Technology
+              <span class="location-tag">
+                <i data-lucide="map-pin" style="width:12px;height:12px"></i>
+                Remote
+              </span>
+            </p>
+            <p class="timeline-desc">
+              Designed and developed 15+ cross-platform mobile applications for diverse clients 
+              and industries. Led architecture decisions and implemented complex business logic 
+              with clean code practices.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">
+              <i data-lucide="calendar" style="width:14px;height:14px"></i>
+              Feb 2023 — Jan 2024
+            </span>
+            <h3 class="timeline-role">Junior Flutter Developer</h3>
+            <p class="timeline-company">
+              A'mal Technology
+              <span class="location-tag">
+                <i data-lucide="map-pin" style="width:12px;height:12px"></i>
+                Hybrid
+              </span>
+            </p>
+            <p class="timeline-desc">
+              Collaborated in an Agile team environment using Flutter to develop and maintain 
+              cross-platform mobile solutions. Participated in code reviews and sprint planning.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">
+              <i data-lucide="calendar" style="width:14px;height:14px"></i>
+              Sep 2022 — Aug 2023
+            </span>
+            <h3 class="timeline-role">Freelance Flutter Developer</h3>
+            <p class="timeline-company">
+              Self-employed
+              <span class="location-tag">
+                <i data-lucide="map-pin" style="width:12px;height:12px"></i>
+                Remote
+              </span>
+            </p>
+            <p class="timeline-desc">
+              Worked independently on multiple Flutter projects for various clients, handling 
+              full project lifecycle from requirements gathering to deployment on app stores.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">
+              <i data-lucide="calendar" style="width:14px;height:14px"></i>
+              Aug 2022
+            </span>
+            <h3 class="timeline-role">Flutter Internship</h3>
+            <p class="timeline-company">
+              Orange Digital Center
+              <span class="location-tag">
+                <i data-lucide="map-pin" style="width:12px;height:12px"></i>
+                Cairo
+              </span>
+            </p>
+            <p class="timeline-desc">
+              Completed an intensive Flutter development internship, gaining foundational skills 
+              in Dart, widget architecture, state management, and mobile UI/UX best practices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Projects</p>
+        <h2 class="section-title">Featured Work</h2>
+        <p class="section-subtitle">Impactful applications I've designed and built</p>
+      </div>
+
+      <div class="projects-grid stagger-children">
+        <!-- Project 1 -->
+        <div class="project-card glass-card reveal" style="--i:0">
+          <div class="project-icon">
+            <i data-lucide="building-2" style="width:28px;height:28px"></i>
+          </div>
+          <h3 class="project-name">SALIS ERP System</h3>
+          <p class="project-desc">
+            Portable admin and sales applications for enterprise resource planning. 
+            A comprehensive ERP solution managing inventory, sales, and business operations.
+          </p>
+          <div class="project-users">
+            <i data-lucide="users" style="width:16px;height:16px"></i>
+            25,000+ users in Saudi Arabia
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Flutter</span>
+            <span class="project-tag">ERP</span>
+            <span class="project-tag">REST API</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card reveal" style="--i:1">
+          <div class="project-icon">
+            <i data-lucide="flower-2" style="width:28px;height:28px"></i>
+          </div>
+          <h3 class="project-name">Flora Ecosystem</h3>
+          <p class="project-desc">
+            A suite of e-commerce apps including Flora, Flora Shop, and Flora Driver. 
+            Complete ecosystem for flower ordering, shop management, and delivery tracking.
+          </p>
+          <div class="project-users">
+            <i data-lucide="app-window" style="width:16px;height:16px"></i>
+            Available on App Store
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Flutter</span>
+            <span class="project-tag">E-commerce</span>
+            <span class="project-tag">Maps</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-card reveal" style="--i:2">
+          <div class="project-icon">
+            <i data-lucide="bot" style="width:28px;height:28px"></i>
+          </div>
+          <h3 class="project-name">Hadiya</h3>
+          <p class="project-desc">
+            AI-powered gift delivery system featuring AI-assisted chat ordering. 
+            Intelligent recommendations and seamless delivery experience for users.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Flutter</span>
+            <span class="project-tag">AI Chat</span>
+            <span class="project-tag">Firebase</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass-card reveal" style="--i:3">
+          <div class="project-icon">
+            <i data-lucide="home" style="width:28px;height:28px"></i>
+          </div>
+          <h3 class="project-name">Aqaraty</h3>
+          <p class="project-desc">
+            Smart property management system for owners and employees. 
+            Handles property listings, tenant management, and financial tracking.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Flutter</span>
+            <span class="project-tag">Real Estate</span>
+            <span class="project-tag">SQLite</span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card glass-card reveal" style="--i:4">
+          <div class="project-icon">
+            <i data-lucide="heart-pulse" style="width:28px;height:28px"></i>
+          </div>
+          <h3 class="project-name">Amaly</h3>
+          <p class="project-desc">
+            Digital healthcare platform with deep linking and community features. 
+            Connecting patients and providers with modern health management tools.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Flutter</span>
+            <span class="project-tag">Healthcare</span>
+            <span class="project-tag">Deep Links</span>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card glass-card reveal" style="--i:5">
+          <div class="project-icon">
+            <i data-lucide="map" style="width:28px;height:28px"></i>
+          </div>
+          <h3 class="project-name">Sahla</h3>
+          <p class="project-desc">
+            City services and marketplace application connecting users with local 
+            businesses and service providers for everyday needs.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Flutter</span>
+            <span class="project-tag">Marketplace</span>
+            <span class="project-tag">Location</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Skills</p>
+        <h2 class="section-title">Tech Stack</h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+      </div>
+
+      <div class="skills-grid stagger-children">
+        <!-- Frameworks & Languages -->
+        <div class="skill-category glass-card reveal" style="--i:0">
+          <div class="category-header">
+            <div class="category-icon">
+              <i data-lucide="code-2" style="width:22px;height:22px"></i>
+            </div>
+            <h3 class="category-title">Frameworks & Languages</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-item"><span class="skill-dot"></span>Flutter</span>
+            <span class="skill-item"><span class="skill-dot"></span>Dart</span>
+          </div>
+        </div>
+
+        <!-- State Management -->
+        <div class="skill-category glass-card reveal" style="--i:1">
+          <div class="category-header">
+            <div class="category-icon">
+              <i data-lucide="git-branch" style="width:22px;height:22px"></i>
+            </div>
+            <h3 class="category-title">State Management</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-item"><span class="skill-dot"></span>Cubit / Bloc</span>
+            <span class="skill-item"><span class="skill-dot"></span>GetX</span>
+            <span class="skill-item"><span class="skill-dot"></span>Provider</span>
+          </div>
+        </div>
+
+        <!-- Backend & Tools -->
+        <div class="skill-category glass-card reveal" style="--i:2">
+          <div class="category-header">
+            <div class="category-icon">
+              <i data-lucide="database" style="width:22px;height:22px"></i>
+            </div>
+            <h3 class="category-title">Backend & Tools</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-item"><span class="skill-dot"></span>Firebase</span>
+            <span class="skill-item"><span class="skill-dot"></span>REST APIs</span>
+            <span class="skill-item"><span class="skill-dot"></span>Retrofit</span>
+            <span class="skill-item"><span class="skill-dot"></span>SQLite</span>
+            <span class="skill-item"><span class="skill-dot"></span>Hive</span>
+            <span class="skill-item"><span class="skill-dot"></span>Secure Storage</span>
+            <span class="skill-item"><span class="skill-dot"></span>Web Sockets</span>
+          </div>
+        </div>
+
+        <!-- UI/UX & DevOps -->
+        <div class="skill-category glass-card reveal" style="--i:3">
+          <div class="category-header">
+            <div class="category-icon">
+              <i data-lucide="settings" style="width:22px;height:22px"></i>
+            </div>
+            <h3 class="category-title">UI/UX & DevOps</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-item"><span class="skill-dot"></span>Responsive UI</span>
+            <span class="skill-item"><span class="skill-dot"></span>Animations</span>
+            <span class="skill-item"><span class="skill-dot"></span>Google Maps</span>
+            <span class="skill-item"><span class="skill-dot"></span>Flutter Charts</span>
+            <span class="skill-item"><span class="skill-dot"></span>Clean Architecture</span>
+            <span class="skill-item"><span class="skill-dot"></span>SOLID</span>
+            <span class="skill-item"><span class="skill-dot"></span>Git / GitHub</span>
+            <span class="skill-item"><span class="skill-dot"></span>App Publishing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Education</p>
+        <h2 class="section-title">Academic Background</h2>
+        <p class="section-subtitle">My educational foundation</p>
+      </div>
+
+      <div class="education-card glass-card reveal">
+        <div class="edu-top">
+          <div class="edu-icon">
+            <i data-lucide="graduation-cap" style="width:30px;height:30px"></i>
+          </div>
+          <div>
+            <h3 class="edu-degree">BSc in Computer Science</h3>
+            <p class="edu-university">Helwan University, Cairo</p>
+            <p class="edu-date">2019 — 2023</p>
+          </div>
+        </div>
+        <div class="edu-details">
+          <div class="edu-detail">
+            <span class="edu-detail-icon">
+              <i data-lucide="award" style="width:20px;height:20px"></i>
+            </span>
+            <div>
+              <p class="edu-detail-label">Grade</p>
+              <p class="edu-detail-value">Very Good</p>
+            </div>
+          </div>
+          <div class="edu-detail">
+            <span class="edu-detail-icon">
+              <i data-lucide="book-open" style="width:20px;height:20px"></i>
+            </span>
+            <div>
+              <p class="edu-detail-label">Department</p>
+              <p class="edu-detail-value">Computer Science</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Have a project in mind? Let's talk about it</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-card glass-card reveal">
+          <h3 class="contact-info-title">Get in Touch</h3>
+          <p class="contact-info-desc">
+            I'm always excited to discuss new projects, creative ideas, or opportunities 
+            to be part of something special. Let's create something amazing together!
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="contact-detail-icon">
+                <i data-lucide="mail" style="width:20px;height:20px"></i>
+              </div>
+              <div>
+                <p class="contact-detail-label">Email</p>
+                <p class="contact-detail-value">
+                  <a href="mailto:ahmednaser.eng@gmail.com">ahmednaser.eng@gmail.com</a>
+                </p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">
+                <i data-lucide="phone" style="width:20px;height:20px"></i>
+              </div>
+              <div>
+                <p class="contact-detail-label">Phone</p>
+                <p class="contact-detail-value">
+                  <a href="tel:+201121362555">+20 112 136 2555</a>
+                </p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">
+                <i data-lucide="map-pin" style="width:20px;height:20px"></i>
+              </div>
+              <div>
+                <p class="contact-detail-label">Location</p>
+                <p class="contact-detail-value">Cairo, Egypt</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <a href="https://github.com/ahmednaser7897" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+              <i data-lucide="github" style="width:20px;height:20px"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ahmed-naser-9a6342227/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+              <i data-lucide="linkedin" style="width:20px;height:20px"></i>
+            </a>
+            <a href="mailto:ahmednaser.eng@gmail.com" class="social-link" aria-label="Email">
+              <i data-lucide="mail" style="width:20px;height:20px"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-card glass-card reveal reveal-delay-2">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Your Name</label>
+                <input type="text" id="name" class="form-input" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Your Email</label>
+                <input type="email" id="email" class="form-input" placeholder="john@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <input type="text" id="subject" class="form-input" placeholder="Project Discussion" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea id="message" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">
+              Send Message
+              <i data-lucide="arrow-right" style="width:18px;height:18px"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        &copy; 2026 Ahmed Naser. Built with <span class="heart">♥</span> and lots of ☕
+      </p>
+      <div class="footer-links">
+        <a href="https://github.com/ahmednaser7897" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/ahmed-naser-9a6342227/" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+        <a href="mailto:ahmednaser.eng@gmail.com" class="footer-link">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i data-lucide="chevron-up" style="width:20px;height:20px"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
