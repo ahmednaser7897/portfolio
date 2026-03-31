@@ -185,11 +185,11 @@ function renderProjects() {
         <div class="project-tags">
           ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
         </div>
-        
+        ${project.users ? `
         <div class="project-users">
           <i data-lucide="users" style="width:14px;height:14px"></i>
-          <span>${project.usersCount || '25,000+'} Users</span>
-        </div>
+          <span>${project.users}</span>
+        </div>` : ''}
         
         <div class="project-links">
           ${project.links.map(link => `
