@@ -18,7 +18,7 @@ function renderEducation() {
           <div>
             <h3 class="edu-degree">${educationData.degree}</h3>
             <p class="edu-university">${educationData.university}</p>
-            <span class="edu-date">${educationData.period}</span>
+            <span class="edu-date">${educationData.date}</span>
           </div>
         </div>
         
@@ -26,8 +26,8 @@ function renderEducation() {
           <div class="edu-detail">
             <i data-lucide="book-open" class="edu-detail-icon"></i>
             <div>
-              <p class="edu-detail-label">Major</p>
-              <p class="edu-detail-value">${educationData.major}</p>
+              <p class="edu-detail-label">Department</p>
+              <p class="edu-detail-value">${educationData.department}</p>
             </div>
           </div>
           <div class="edu-detail">
