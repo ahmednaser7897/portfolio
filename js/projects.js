@@ -176,10 +176,12 @@ function renderProjects() {
   if (projectsContainer) {
     projectsContainer.innerHTML = projectsData.map(project => `
       <div class="project-card glass-card reveal">
-        <div class="project-icon">
-          <i data-lucide="${project.icon}" style="width:28px;height:28px"></i>
+        <div class="project-header">
+          <div class="project-icon">
+            <i data-lucide="${project.icon}" style="width:28px;height:28px"></i>
+          </div>
+          <h3 class="project-name">${project.name}</h3>
         </div>
-        <h3 class="project-name">${project.name}</h3>
         <p class="project-desc">${project.desc}</p>
         
         <div class="project-tags">
