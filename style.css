@@ -903,11 +903,10 @@ h6 {
     display: flex;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .skills-grid {
+  .projects-grid,
+  .skills-grid,
+  .certificates-grid,
+  .courses-grid {
     grid-template-columns: 1fr;
   }
 
