@@ -18,6 +18,11 @@ const skillsData = [
     category: "UI/UX & DevOps",
     icon: "settings",
     items: ["Responsive UI", "Animations", "Google Maps", "Flutter Charts", "Clean Architecture", "SOLID", "Deep Linking", "Git / GitHub", "App Publishing"]
+  },
+  {
+    category: "AI-Assisted Development",
+    icon: "bot",
+    items: ["Antigravity", "Cursor", "cloud ai", "Windsurf", "GitHub Copilot", "chat gpt"]
   }
 ];
 

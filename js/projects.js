@@ -6,7 +6,17 @@ const projectsData = [
     users: "25,000+ users in Saudi Arabia",
     tags: ["Flutter", "ERP", "REST API"],
     links: [
-      { icon: "globe", text: "Website", url: "https://saliserp.com/" }
+      { icon: "globe", text: "Website", url: "https://saliserp.com/" },
+      { icon: "external-link", text: "Demo", url: "https://drive.google.com/drive/folders/1YLWIVcD015nCb5XvEn3SN2p-bLEFL-r3" }
+    ]
+  },
+  {
+    name: "Hala Car",
+    icon: "car",
+    desc: "Built a feature-rich car marketplace application with advanced search, smart filtering, favorites, and secure user authentication. Implemented an AI chat assistant that provides personalized vehicle recommendations based on users' requirements, delivering a seamless and intelligent buying experience.",
+    tags: ["Flutter", "AI Chat", "Marketplace"],
+    links: [
+      { icon: "external-link", text: "Demo", url: "https://drive.google.com/drive/folders/1EJ5hpgpyM7oelmUMH_jgSQ40TAi02OsO?usp=sharing" }
     ]
   },
   {
@@ -196,10 +206,10 @@ function renderProjects() {
         <div class="project-links">
           ${project.links.map(link => `
             <a href="${link.url}" target="_blank" rel="noopener" class="project-store-link">
-              ${link.icon === 'linkedin' 
-                ? `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg> ${link.text}`
-                : `<i data-lucide="${link.icon}" style="width:14px;height:14px"></i> ${link.text}`
-              }
+              ${link.icon === 'linkedin'
+        ? `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg> ${link.text}`
+        : `<i data-lucide="${link.icon}" style="width:14px;height:14px"></i> ${link.text}`
+      }
             </a>
           `).join('')}
         </div>
