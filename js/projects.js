@@ -1,5 +1,16 @@
 const projectsData = [
   {
+    name: "Academy",
+    icon: "server",
+    badge: "Independent Backend Project",
+    desc: "An ASP.NET Core backend solution built using a Clean Architecture-oriented, multi-layer architecture, separating Domain, Application, Infrastructure, and Presentation responsibilities.\n\nThe project integrates Entity Framework Core with SQL Server, dependency registration, application localization, centralized exception handling middleware, structured logging with Serilog, and API documentation.",
+    layers: "Domain • Application • Infrastructure • Presentation",
+    tags: ["C#", ".NET 10", "ASP.NET Core", "Clean Architecture", "EF Core", "SQL Server", "MediatR", "Serilog", "Swagger"],
+    links: [
+      { icon: "github", text: "GitHub Repository", url: "https://github.com/ahmednaser7897/Academy" }
+    ]
+  },
+  {
     name: "SALIS ERP System",
     icon: "building-2",
     desc: "A comprehensive Enterprise Resource Planning (ERP) suite with specialized Admin and Sales mobile applications developed in Flutter. Facilitates real-time inventory tracking, sales management, and business operations.",
@@ -190,10 +201,19 @@ function renderProjects() {
           <div class="project-icon">
             <i data-lucide="${project.icon}" style="width:28px;height:28px"></i>
           </div>
-          <h3 class="project-name">${project.name}</h3>
+          <div class="project-title-wrap">
+            <h3 class="project-name">${project.name}</h3>
+            ${project.badge ? `<span class="project-badge">${project.badge}</span>` : ''}
+          </div>
         </div>
-        <p class="project-desc">${project.desc}</p>
+        <p class="project-desc">${project.desc.replace(/\n\n/g, '<br><br>')}</p>
         
+        ${project.layers ? `
+        <div class="project-layers">
+          <i data-lucide="layers" style="width:14px;height:14px"></i>
+          <span>${project.layers}</span>
+        </div>` : ''}
+
         <div class="project-tags">
           ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
         </div>
@@ -208,6 +228,8 @@ function renderProjects() {
             <a href="${link.url}" target="_blank" rel="noopener" class="project-store-link">
               ${link.icon === 'linkedin'
         ? `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg> ${link.text}`
+        : link.icon === 'github'
+        ? `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg> ${link.text}`
         : `<i data-lucide="${link.icon}" style="width:14px;height:14px"></i> ${link.text}`
       }
             </a>

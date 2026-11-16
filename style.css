@@ -483,6 +483,14 @@ h6 {
   letter-spacing: -1.5px;
 }
 
+.hero-main-title {
+  font-size: clamp(1.35rem, 3.2vw, 1.85rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
 .hero-title {
   font-size: clamp(1.2rem, 3vw, 1.6rem);
   margin-bottom: 24px;
@@ -847,7 +855,7 @@ h6 {
   }
 
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    column-count: 2;
   }
 
   .contact-grid {
@@ -904,10 +912,13 @@ h6 {
   }
 
   .projects-grid,
-  .skills-grid,
   .certificates-grid,
   .courses-grid {
     grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    column-count: 1;
   }
 
   .about-stats {

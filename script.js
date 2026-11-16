@@ -29,11 +29,10 @@ function initTypedText() {
   if (!typedElement) return;
 
   const phrases = [
-    'Mid-level Flutter Developer',
-    'Mobile App Specialist',
-    'Clean Architecture Advocate',
-    'Cross-Platform Engineer',
-    'UI/UX Enthusiast'
+    'Flutter Developer',
+    'ASP.NET Core Developer',
+    'Backend Engineer',
+    'Mobile Application Developer'
   ];
 
   let phraseIndex = 0;

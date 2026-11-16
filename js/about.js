@@ -1,24 +1,24 @@
 const aboutData = {
   stats: [
-    { number: "3+", label: "Years Experience" },
+    { number: "4+", label: "Years Experience" },
     { number: "15+", label: "Apps Built" },
     { number: "25K+", label: "Users Impacted" }
   ],
   highlights: [
     {
       icon: "smartphone",
-      title: "Cross-Platform Development",
-      desc: "Building beautiful, native-quality mobile apps for both iOS and Android using Flutter and Dart."
+      title: "Mobile Development",
+      desc: "Building high-performance, cross-platform mobile apps for iOS and Android using Flutter, Dart, and clean state management."
+    },
+    {
+      icon: "server",
+      title: "Backend Engineering",
+      desc: "Developing structured RESTful APIs and reliable backend services using C#, ASP.NET Core, Entity Framework Core, and SQL Server."
     },
     {
       icon: "layers",
       title: "Clean Architecture",
-      desc: "Applying SOLID principles and clean architecture patterns for scalable, maintainable codebases."
-    },
-    {
-      icon: "zap",
-      title: "Performance Focused",
-      desc: "Optimizing app performance with efficient state management and responsive adaptive UI design."
+      desc: "Applying multi-layer separation, SOLID principles, and proven design patterns to build maintainable, scalable software solutions."
     }
   ]
 };
