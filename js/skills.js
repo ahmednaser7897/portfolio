@@ -422,50 +422,63 @@ function escapeHtml(str) {
     .replace(/'/g, '&#039;');
 }
 
+function buildCategoryHTML(category) {
+  const totalSkills = category.items.length;
+  return `
+    <div class="skill-category glass-card reveal" data-domain="${category.domain}" id="skill-cat-${category.id}">
+      <div class="category-header">
+        <div class="category-header-left">
+          <div class="category-icon">
+            <i data-lucide="${category.icon}" style="width:24px;height:24px"></i>
+          </div>
+          <div>
+            <h3 class="category-title">${category.category}</h3>
+          </div>
+        </div>
+        <div class="category-badge-group">
+          <span class="category-domain-badge">${category.domainLabel}</span>
+          <span class="category-count-badge">${totalSkills} skills</span>
+        </div>
+      </div>
+
+      <div class="skill-groups">
+        ${category.groups.map(group => `
+          <div class="skill-subgroup">
+            ${group.title ? `<div class="skill-subgroup-title">${group.title}</div>` : ''}
+            <div class="skill-list">
+              ${group.items.map(skill => {
+                const isCode = (skill.startsWith('I') && skill[1] && skill[1] === skill[1].toUpperCase() && !skill.includes(' ')) || skill.includes(':') || skill.includes('<');
+                return `
+                  <div class="skill-item ${isCode ? 'code-font' : ''}">
+                    <span class="skill-dot"></span>
+                    <span>${escapeHtml(skill)}</span>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
 function renderSkills() {
   const skillsContainer = document.getElementById('skillsContainer');
   if (!skillsContainer) return;
 
-  skillsContainer.innerHTML = skillsData.map(category => {
-    const totalSkills = category.items.length;
-    return `
-      <div class="skill-category glass-card reveal" data-domain="${category.domain}" id="skill-cat-${category.id}">
-        <div class="category-header">
-          <div class="category-header-left">
-            <div class="category-icon">
-              <i data-lucide="${category.icon}" style="width:24px;height:24px"></i>
-            </div>
-            <div>
-              <h3 class="category-title">${category.category}</h3>
-            </div>
-          </div>
-          <div class="category-badge-group">
-            <span class="category-domain-badge">${category.domainLabel}</span>
-            <span class="category-count-badge">${totalSkills} skills</span>
-          </div>
-        </div>
+  // Split into left column (even indices) and right column (odd indices)
+  const leftCol  = skillsData.filter((_, i) => i % 2 === 0);
+  const rightCol = skillsData.filter((_, i) => i % 2 === 1);
 
-        <div class="skill-groups">
-          ${category.groups.map(group => `
-            <div class="skill-subgroup">
-              ${group.title ? `<div class="skill-subgroup-title">${group.title}</div>` : ''}
-              <div class="skill-list">
-                ${group.items.map(skill => {
-                  const isCode = (skill.startsWith('I') && skill[1] && skill[1] === skill[1].toUpperCase() && !skill.includes(' ')) || skill.includes(':') || skill.includes('<');
-                  return `
-                    <div class="skill-item ${isCode ? 'code-font' : ''}">
-                      <span class="skill-dot"></span>
-                      <span>${escapeHtml(skill)}</span>
-                    </div>
-                  `;
-                }).join('')}
-              </div>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    `;
-  }).join('');
+  skillsContainer.innerHTML = `
+    <div class="skills-col skills-col-left">
+      ${leftCol.map(buildCategoryHTML).join('')}
+    </div>
+    <div class="skills-col skills-col-right">
+      ${rightCol.map(buildCategoryHTML).join('')}
+    </div>
+  `;
 
   initSkillsFilters();
 }

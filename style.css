@@ -851,11 +851,15 @@ h6 {
   }
 
   .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+  }
+  .projects-col {
+    flex: 1;
+    min-width: 0;
   }
 
   .skills-grid {
-    column-count: 2;
+    flex-direction: row;
   }
 
   .contact-grid {
@@ -911,14 +915,19 @@ h6 {
     display: flex;
   }
 
-  .projects-grid,
+  .projects-grid {
+    flex-direction: column;
+  }
+  .projects-col {
+    width: 100%;
+  }
   .certificates-grid,
   .courses-grid {
     grid-template-columns: 1fr;
   }
 
   .skills-grid {
-    column-count: 1;
+    flex-direction: column;
   }
 
   .about-stats {
